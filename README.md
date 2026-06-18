@@ -1,2 +1,0 @@
-# ynm.rivadeneira
-Deberes
