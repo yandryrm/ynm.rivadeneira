@@ -1,0 +1,41 @@
+TABLAS DEL PGADMIN
+
+--tabla para el Lunes
+CREATE TABLE lunes (
+    id SERIAL PRIMARY KEY,
+    actividad VARCHAR(150) NOT NULL
+);
+
+--tabla para el Martes
+CREATE TABLE martes (
+    id SERIAL PRIMARY KEY,
+    actividad VARCHAR(150) NOT NULL
+);
+
+-- tabla para el Miércoles
+CREATE TABLE miercoles (
+    id SERIAL PRIMARY KEY,
+    actividad VARCHAR(150) NOT NULL
+);
+
+-- tabla para el Jueves
+CREATE TABLE jueves (
+    id SERIAL PRIMARY KEY,
+    actividad VARCHAR(150) NOT NULL,
+    observacion VARCHAR(250)
+);
+
+--Lunes
+INSERT INTO lunes (actividad) VALUES 
+('Salir a caminar por el barrio')
+
+--Martes
+INSERT INTO martes (actividad) VALUES 
+('Regar las plantas del jardín o del balcón');
+--Miércoles
+INSERT INTO miercoles (actividad) VALUES 
+('Jugar al futbol en el parque con amigos');
+
+--Jueves
+INSERT INTO jueves (actividad, observacion) VALUES 
+('Disfrutar de un helado caminando por la plaza', 'Llevar dinero para pagar');  
