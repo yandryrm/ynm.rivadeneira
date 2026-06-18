@@ -1,20 +1,12 @@
+TABLAS EN VSC
 
+    from flask import Flask, jsonify
+    import psycopg2
+    app = Flask(__name__)
+    app.json.sort_keys = False
 
-
-
-
-
-
-
-
-
-from flask import Flask, jsonify
-import psycopg2
-app = Flask(__name__)
-app.json.sort_keys = False
-
-# Método para conectar a LA BASE DE DATOS
-def obtener_conexion():
+    # Método para conectar a LA BASE DE DATOS
+    def obtener_conexion():
     return psycopg2.connect(
         host="localhost",
         database="Tablasdelasemana",
@@ -23,9 +15,9 @@ def obtener_conexion():
         port="5432"
     )
 
-#-------------------------------------------------
-@app.route("/")
-def inicio():
+    #-------------------------------------------------
+    @app.route("/")
+    def inicio():
     conexion = obtener_conexion()
     cursor = conexion.cursor()
     
@@ -69,5 +61,5 @@ def inicio():
     }
     return jsonify(itinerario_ordenado)
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     app.run(debug=True)
